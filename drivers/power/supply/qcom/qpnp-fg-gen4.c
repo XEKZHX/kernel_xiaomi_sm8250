@@ -1238,7 +1238,7 @@ static int fg_gen4_get_prop_soc_scale(struct fg_gen4_chip *chip)
 			}	
 		} else if (chip->vbatt_low) {
 			fg_dbg(fg, FG_STATUS, "Vbatt > 3650,reset Vbatt_low = false\n",fg->charge_status);
-			chip->vbatt_Low = false;
+			chip->vbatt_low = false;
 		}
 	}
 	return rc;
