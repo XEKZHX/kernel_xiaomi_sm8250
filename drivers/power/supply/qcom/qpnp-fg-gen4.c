@@ -1195,6 +1195,8 @@ static int fg_gen4_get_power(struct fg_gen4_chip *chip, int *val, bool average)
 #define LOW_TEMP_CUTOFF_VOL_MV  3200
 #define NORMAL_TEMP_CUTOFF_VOL_MV 3400
 
+static int fg_gen4_rapid_soc_config(struct fg_gen4_chip *chip, bool en);
+
 static int fg_gen4_get_prop_soc_scale(struct fg_gen4_chip *chip)
 {
 	struct fg_dev *fg = &chip->fg;
@@ -1239,7 +1241,6 @@ static int fg_gen4_get_prop_soc_scale(struct fg_gen4_chip *chip)
 			chip->vbatt_Low = false;
 		}
 	}
-
 	return rc;
 }
 
